@@ -3,9 +3,16 @@ import { Example } from "./Example";
 import styles from "./Example.module.css";
 
 const DEFAULT_EXAMPLES: string[] = [
-    "What is included in my Northwind Health Plus plan that is not in standard?",
+    "What are the key initiatives/innovation/growth drivers/new business development the business is pursuing",
     "What happens in a performance review?",
-    "What does a Product Manager do?"
+    "Highlight changes to business model?",
+    "Comments about company KPIs?",
+    "Procurement strategies and commentary about inventory?",
+    "Information about Foot traffic, Guest Count, Transaction Volume?",
+    "What factors contributed to any changes in revenue?",
+    "Are there any new risk factors mentioned in the report?",
+    "How do the gross and net income figures compare to previous periods?",
+    "How have the company's assets and liabilities changed since the last report?"
 ];
 
 const GPT4V_EXAMPLES: string[] = [
