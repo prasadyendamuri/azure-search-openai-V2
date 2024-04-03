@@ -22,9 +22,9 @@ This repository now includes an example of integrating GPT-4 Turbo with Vision w
 
 - Ensure that you can deploy the Azure OpenAI resource group in [a region where all required components are available](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models#model-summary-table-and-region-availability):
     - Azure OpenAI models
-        - gpt-35-turbo
+        - gpt-4-turbo
         - text-embedding-ada-002
-        - gpt-4v
+        - gpt-4
     - [Azure AI Vision](https://learn.microsoft.com/azure/ai-services/computer-vision/)
 
 ### Setup and Usage

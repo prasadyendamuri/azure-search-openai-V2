@@ -7,22 +7,18 @@ import tiktoken
 from .imageshelper import calculate_image_token_cost
 
 MODELS_2_TOKEN_LIMITS = {
-    "gpt-35-turbo": 4000,
-    "gpt-3.5-turbo": 4000,
-    "gpt-35-turbo-16k": 16000,
-    "gpt-3.5-turbo-16k": 16000,
     "gpt-4": 8100,
     "gpt-4-32k": 32000,
     "gpt-4v": 128000,
 }
 
 
-AOAI_2_OAI = {"gpt-35-turbo": "gpt-3.5-turbo", "gpt-35-turbo-16k": "gpt-3.5-turbo-16k", "gpt-4v": "gpt-4-turbo-vision"}
+AOAI_2_OAI = {"gpt-4": "gpt-4-turbo"}
 
 
 def get_token_limit(model_id: str) -> int:
     if model_id not in MODELS_2_TOKEN_LIMITS:
-        raise ValueError(f"Expected model gpt-35-turbo and above. Received: {model_id}")
+        raise ValueError(f"Expected model gpt-4-turbo and above. Received: {model_id}")
     return MODELS_2_TOKEN_LIMITS[model_id]
 
 
@@ -36,7 +32,7 @@ def num_tokens_from_messages(message: Mapping[str, object], model: str) -> int:
         int: The total number of tokens required to encode the message.
     Example:
         message = {'role': 'user', 'content': 'Hello, how are you?'}
-        model = 'gpt-3.5-turbo'
+        model = 'gpt-4-turbo'
         num_tokens_from_messages(message, model)
         output: 11
     """
